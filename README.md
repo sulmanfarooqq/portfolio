@@ -1,54 +1,64 @@
-<div align="center">
-  
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/portfolio)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/portfolio?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/portfolio?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/SAu7e09vXoQ?style=social)](https://youtu.be/SAu7e09vXoQ)
+# Sulman Farooq - Creative Designer Portfolio
 
-  <br />
-  <br />
+[![Live Website](https://img.shields.io/badge/Live-Website-brightgreen)](https://sulmanfarooqq.github.io/portfolio/)
+[![License](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 
-  <h2 align="center">Personal Portfolio Website</h2>
+## 🎨 About The Project
 
-  Fully responsive personal portfolio website, <br />Responsive for all devices, built using HTML, CSS, and JavaScript.
+This is my personal portfolio website showcasing my work as a Creative Designer specializing in brand promotions, flyer design, and poster creation. Currently pursuing Software Engineering at MUST University, Barnala Azad Kashmir, I combine technical expertise with creative design to deliver impactful brand visuals.
 
-  <a href="https://codewithsadee.github.io/portfolio/"><strong>➥ Live Demo</strong></a>
+### 🌟 Live Website
+Visit my portfolio: [sulmanfarooqq.github.io/portfolio](https://sulmanfarooqq.github.io/portfolio/)
 
-</div>
+## ✨ Features
 
-<br />
+- **Professional Showcase**: Display of creative work and brand designs
+- **Service Offerings**: Detailed information about design services
+- **Blog Section**: Articles about design trends and insights
+- **Skills Overview**: Visual representation of technical and creative capabilities
+- **Client Reviews**: Testimonials from satisfied clients
+- **Contact Form**: Easy way to initiate collaboration
 
-### Demo Screeshots
+## 🛠️ Technical Stack
 
-![Portfolio Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+- HTML5
+- CSS3
+- JavaScript
+- Modern UI/UX principles
+- Responsive Design
+- SEO Optimized
 
-### Prerequisites
+## 📊 Portfolio Statistics
 
-Before you begin, ensure you have met the following requirements:
+- 50+ Brand Designs
+- Multiple Client Success Stories
+- Diverse Project Portfolio
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+## 🔒 License & Usage Restrictions
 
-### Run Locally
+**PROPRIETARY AND CONFIDENTIAL**
 
-To run **Portfolio** locally, run this command on your git bash:
+Copyright (c) 2024 Sulman Farooq. All Rights Reserved.
 
-Linux and macOS:
+This portfolio website and its source code are proprietary and CONFIDENTIAL. The source code is not open source and is not available for public use, modification, or distribution.
 
-```bash
-sudo git clone https://github.com/codewithsadee/portfolio.git
-```
+### Restrictions:
+- No copying or reproduction of the code
+- No modification or derivative works
+- No redistribution of the code
+- No use of design elements without explicit permission
+- No commercial use of any part of the code or design
 
-Windows:
+### Permitted Usage:
+- Viewing the live website
+- Referencing the portfolio for inspiration
+- Contacting for business inquiries
 
-```bash
-git clone https://github.com/codewithsadee/portfolio.git
-```
+## 📞 Contact
 
-### Contact
+- **Location**: Barnala, Azad Kashmir, Pakistan
+- **Email**: sulmanfarooq@example.com
+- **Website**: [sulmanfarooqq.github.io/portfolio](https://sulmanfarooqq.github.io/portfolio/)
 
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-### License
-
-This project is **free to use** and does not contains any license.
+---
+© 2024 Sulman Farooq. All Rights Reserved.
