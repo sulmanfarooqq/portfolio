@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sulman Farooq - Creative Designer & Software Engineering Student</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Add this before the closing </head> tag -->
+  <style>
+    .contact-message {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: var(--radius-5);
+        text-align: center;
+    }
+
+    .contact-message.success {
+        background-color: rgba(76, 175, 80, 0.1);
+        color: #4CAF50;
+        border: 1px solid #4CAF50;
+    }
+
+    .contact-message.error {
+        background-color: rgba(244, 67, 54, 0.1);
+        color: #F44336;
+        border: 1px solid #F44336;
+    }
+
+    .btn-submit {
+        position: relative;
+        display: inline-block;
+        padding: 12px 30px;
+        background: var(--gradient-1);
+        color: var(--white);
+        border: none;
+        border-radius: var(--radius-5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .btn-submit:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+
+    .submit-loading {
+        display: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ffffff;
+        border-top: 2px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <!-- <a href="#">
+        <h1 class="logo">Sulman Farooq</h1>
+      </a> -->
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      </button>
+
+      <nav class="navbar container">
+        <ul class="navbar-list">
+
+          <li>
+            <a href="javascript:void(0)" data-section="home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" data-section="about" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" data-section="portfolio" class="navbar-link" data-nav-link>Portfolio</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" data-section="skills" class="navbar-link" data-nav-link>Skills</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" data-section="reviews" class="navbar-link" data-nav-link>Reviews</a>
+          </li>
+
+          <li>
+            <a href="javascript:void(0)" data-section="contact" class="navbar-link" data-nav-link>Contact</a>
+          </li>
+
+          <li class="auth-buttons">
+            <a href="#" class="btn btn-primary" id="loginBtn">Login</a>
+            <a href="#" class="btn btn-primary" id="registerBtn">Register</a>
+            <a href="#" class="btn btn-primary hidden" id="logoutBtn">Logout</a>
+            <span class="user-email hidden" id="userEmail"></span>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/hero-banner.jpg" width="800" height="864" loading="lazy" alt="Ethan's Photo"
+              class="img-cover">
+
+            <div class="elem elem-1">
+              <p class="elem-title">19</p>
+              <p class="elem-text">Years Young</p>
+            </div>
+
+            <div class="elem elem-2">
+              <p class="elem-title">50+</p>
+              <p class="elem-text">Brand Designs</p>
+            </div>
+
+            <div class="elem elem-3">
+              <ion-icon name="trophy"></ion-icon>
+            </div>
+
+            <img src="./assets/images/rotate-img.png" width="169" height="172" alt="I'm developer from New York"
+              class="rotate-img">
+
+          </div>
+
+          <div class="hero-content">
+
+            <h2 class="hero-title">
+              <span>Hello I'm</span>
+              <strong>Sulman Farooq</strong> Creative Designer from Barnala AJK
+            </h2>
+
+            <p class="hero-text">
+              Passionate flyer and poster designer specializing in brand promotions. Software Engineering student bringing technical precision to creative design.
+            </p>
+
+            <div class="btn-group">
+              <a href="#contact" class="btn btn-primary blue">Collaborate With Me</a>
+              <a href="#about" class="btn">About Me</a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="section about" id="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <img src="./assets/images/about-banner.jpg" width="800" height="652" loading="lazy" alt="Ethan's Photo"
+              class="img-cover">
+
+            <img src="./assets/images/absolute-image.jpg" width="800" height="717" loading="lazy" alt="Ethan's Photo"
+              class="abs-img">
+
+            <div class="abs-icon abs-icon-1">
+              <ion-icon name="logo-css3"></ion-icon>
+            </div>
+
+            <div class="abs-icon abs-icon-2">
+              <ion-icon name="logo-javascript"></ion-icon>
+            </div>
+
+            <div class="abs-icon abs-icon-3">
+              <ion-icon name="logo-angular"></ion-icon>
+            </div>
+
+          </figure>
+
+          <div class="about-content">
+            <p class="section-subtitle">I'm a Creative Designer</p>
+
+            <h2 class="h2 section-title">I Create Impactful Brand Visuals</h2>
+
+            <p class="section-text">
+              As a 19-year-old creative designer, I specialize in crafting eye-catching flyers and posters that make brands stand out. Currently pursuing Software Engineering at MUST University, Barnala Azad Kashmir, I bring both technical expertise and creative flair to my designs.
+            </p>
+
+            <p class="section-text">
+              I collaborate with clothing brands, shoe companies, and makeup brands to create promotional materials that capture attention and drive engagement. My goal is to help your brand tell its story through compelling visual design.
+            </p>
+
+            <a href="#portfolio" class="btn btn-primary blue">View My Work</a>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #PORTFOLIO
+      -->
+
+      <section class="section portfolio" id="portfolio">
+        <div class="container">
+
+          <p class="section-subtitle">Portfolio</p>
+
+          <h2 class="h2 section-title">My Amazing Works</h2>
+
+          <p class="section-text">
+            Dliquip ex ea commo do conse namber onequa ute irure dolor in reprehen derit in voluptate
+          </p>
+
+          <ul class="portfolio-list">
+
+            <li>
+              <a href="mm" class="portfolio-card" style="background-image: url('./assets/images/portfolio-1.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">Youtube</p>
+
+                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
+
+                  <span class="btn-link">
+                    <span>View Project</span>
+
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-2.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">Vimeo</p>
+
+                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
+
+                  <span class="btn-link">
+                    <span>View Project</span>
+
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-3.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">Soundcloud</p>
+
+                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
+
+                  <span class="btn-link">
+                    <span>View Project</span>
+
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="portfolio-card" style="background-image: url('./assets/images/portfolio-4.jpg')">
+                <div class="card-content">
+
+                  <p class="card-subtitle">Details</p>
+
+                  <h3 class="h3 card-title">Web Application for Desiverse</h3>
+
+                  <span class="btn-link">
+                    <span>View Project</span>
+
+                    <ion-icon name="arrow-forward"></ion-icon>
+                  </span>
+
+                </div>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SKILLS
+      -->
+
+      <section class="section skills" id="skills">
+        <div class="container">
+          <p class="section-subtitle">My Skills</p>
+          <h2 class="h2 section-title">Design & Creative Skills</h2>
+          <p class="section-text">
+            Specializing in graphic design and brand promotion, with additional capabilities in video editing and software development.
+          </p>
+
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="wrapper" style="width: 95%">
+                <h3 class="skills-title">Graphic Design</h3>
+                <data class="skills-data" value="95">95%</data>
+              </div>
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 95%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 90%">
+                <h3 class="skills-title">Flyer & Poster Design</h3>
+                <data class="skills-data" value="90">90%</data>
+              </div>
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 90%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 85%">
+                <h3 class="skills-title">Adobe Photoshop</h3>
+                <data class="skills-data" value="85">85%</data>
+              </div>
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 85%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 65%">
+                <h3 class="skills-title">Video Editing</h3>
+                <data class="skills-data" value="65">65%</data>
+              </div>
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 65%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 70%">
+                <h3 class="skills-title">canva</h3>
+                <data class="skills-data" value="70">70%</data>
+              </div>
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 70%"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="wrapper" style="width: 80%">
+                <h3 class="skills-title">Brand Promotion</h3>
+                <data class="skills-data" value="80">80%</data>
+              </div>
+              <div class="skills-progress-box">
+                <div class="skills-progress" style="width: 80%"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+      <section class="section blog" id="blog">
+        <div class="container">
+          <p class="section-subtitle">Latest Articles</p>
+          <h2 class="h2 section-title">Design & Tech Insights</h2>
+          <p class="section-text">
+            Explore thought-provoking articles about design trends, creative tips, and software engineering insights. Stay updated with the latest in the creative tech world.
+          </p>
+
+          <ul class="blog-list">
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="./blog/design-psychology.html">
+                    <img src="./assets/images/blog-1.jpg" width="1181" height="843" loading="lazy"
+                      alt="The Psychology Behind Effective Design: Colors & Emotions" class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="card-content">
+                  <a href="./blog/design-psychology.html" class="card-tag">Design Psychology</a>
+
+                  <h3 class="card-title">
+                    <a href="./blog/design-psychology.html">The Psychology Behind Effective Design: Colors & Emotions</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                      <time datetime="2024-03-20">March 20, 2024</time>
+                    </div>
+                    <div class="read-time">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <span>5 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="./blog/brand-success.html">
+                    <img src="./assets/images/blog-2.jpg" width="1181" height="843" loading="lazy"
+                      alt="Building a Successful Brand: From Concept to Recognition" class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="card-content">
+                  <a href="./blog/brand-success.html" class="card-tag">Branding</a>
+
+                  <h3 class="card-title">
+                    <a href="./blog/brand-success.html">Building a Successful Brand: From Concept to Recognition</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                      <time datetime="2024-03-18">March 18, 2024</time>
+                    </div>
+                    <div class="read-time">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <span>7 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="blog-card">
+                <figure class="card-banner">
+                  <a href="./blog/tech-design.html">
+                    <img src="./assets/images/blog-3.jpg" width="1181" height="843" loading="lazy"
+                      alt="Merging Technology with Design: The Future of Creative Work" class="img-cover">
+                  </a>
+                </figure>
+
+                <div class="card-content">
+                  <a href="./blog/tech-design.html" class="card-tag">Tech & Design</a>
+
+                  <h3 class="card-title">
+                    <a href="./blog/tech-design.html">Merging Technology with Design: The Future of Creative Work</a>
+                  </h3>
+
+                  <div class="card-meta">
+                    <div class="publish-date">
+                      <ion-icon name="calendar-outline"></ion-icon>
+                      <time datetime="2024-03-15">March 15, 2024</time>
+                    </div>
+                    <div class="read-time">
+                      <ion-icon name="time-outline"></ion-icon>
+                      <span>6 min read</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="blog-cta">
+            <a href="./blog/" class="btn btn-primary blue">View All Articles</a>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #REVIEWS
+      -->
+
+      <section class="section reviews" id="reviews">
+        <div class="container">
+          <p class="section-subtitle">Reviews</p>
+          <h2 class="h2 section-title">What People Say</h2>
+          <p class="section-text">Read what others have to say about my work and services.</p>
+
+          <div class="reviews-container">
+            <div class="reviews-wrapper">
+              <!-- Reviews will be dynamically added here by JavaScript -->
+            </div>
+
+            <div class="review-form-container">
+              <h3>Share Your Experience</h3>
+              <form class="review-form">
+                <input type="email" class="contact-input" id="reviewerEmail" placeholder="Your Email" required>
+                
+                <div class="rating">
+                  <input type="radio" id="star5" name="rating" value="5">
+                  <label for="star5">★</label>
+                  <input type="radio" id="star4" name="rating" value="4">
+                  <label for="star4">★</label>
+                  <input type="radio" id="star3" name="rating" value="3">
+                  <label for="star3">★</label>
+                  <input type="radio" id="star2" name="rating" value="2">
+                  <label for="star2">★</label>
+                  <input type="radio" id="star1" name="rating" value="1">
+                  <label for="star1">★</label>
+                </div>
+
+                <textarea class="contact-input" id="reviewText" placeholder="Your Review" required></textarea>
+                
+                <button type="submit" class="btn-submit">
+                  <span class="btn-text">Submit Review</span>
+                  <div class="submit-loading"></div>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section class="section contact" id="contact">
+        <div class="container">
+          <div class="contact-card">
+            <p class="card-subtitle">Let's Collaborate</p>
+            <h2 class="h2 section-title">Start Your Brand Journey</h2>
+
+            <div class="wrapper">
+              <form class="contact-form">
+                <input type="text" name="name" placeholder="Name" required class="contact-input">
+                <input type="email" name="email" placeholder="Email" required class="contact-input">
+                <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+                <button type="submit" class="btn-submit">
+                  <span class="btn-text">Submit Message</span>
+                  <div class="submit-loading"></div>
+                </button>
+              </form>
+
+              <ul class="contact-list">
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <ion-icon name="location"></ion-icon>
+                  </div>
+                  <div>
+                    <h3 class="contact-item-title">Address</h3>
+                    <address class="contact-item-link">
+                      Barnala, Azad Kashmir, Pakistan
+                    </address>
+                  </div>
+                </li>
+
+                <li class="contact-item">
+                  <div class="contact-icon">
+                    <ion-icon name="mail"></ion-icon>
+                  </div>
+                  <div>
+                    <h3 class="contact-item-title">Email</h3>
+                    <a href="mailto:sulmanfarooq27@gmail.com" class="contact-item-link">sulmanfarooq27@gmail.com</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2024 <a href="javascript:void(0)" class="copyright-link">Sulman Farooq</a>. All Rights Reserved
+      </p>
+      <ul class="footer-list">
+        <li>
+          <a href="javascript:void(0)" class="footer-link" data-footer-toggle="terms">Terms & Conditions</a>
+          <div class="footer-content terms-content">
+            <h3>Terms & Conditions</h3>
+            <div class="footer-details">
+              <h4>1. Services</h4>
+              <p>We provide creative design services including flyer design, poster creation, and brand promotion materials.</p>
+              
+              <h4>2. Quality Commitment</h4>
+              <p>We are committed to delivering high-quality designs that meet your brand's requirements and standards.</p>
+              
+              <h4>3. Revisions</h4>
+              <p>Each project includes up to 2 rounds of revisions to ensure your complete satisfaction.</p>
+              
+              <h4>4. Intellectual Property</h4>
+              <p>All final designs become your property after full payment and project completion.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="javascript:void(0)" class="footer-link" data-footer-toggle="privacy">Privacy Policy</a>
+          <div class="footer-content privacy-content">
+            <h3>Privacy Policy</h3>
+            <div class="footer-details">
+              <h4>1. Data Collection</h4>
+              <p>We collect only essential information needed to provide our services.</p>
+              
+              <h4>2. Data Usage</h4>
+              <p>Your information is used solely for communication and project delivery purposes.</p>
+              
+              <h4>3. Data Protection</h4>
+              <p>We implement industry-standard security measures to protect your data.</p>
+              
+              <h4>4. Third-Party Sharing</h4>
+              <p>We never share your information with third parties without your consent.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="javascript:void(0)" class="back-to-top" data-back-to-top>BACK TOP</a>
+
+
+
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/reviews.js"></script>
+  <script src="./assets/js/auth.js"></script>
+
+  <!-- Review Card Template -->
+  <template id="reviewTemplate">
+    <div class="review-card">
+      <div class="review-options">
+        <button class="review-options-btn">⋮</button>
+        <div class="review-options-menu">
+          <div class="review-options-item" data-action="delete">Delete Review</div>
+        </div>
+      </div>
+      
+      <h4 class="reviewer-name"></h4>
+      <p class="reviewer-address"></p>
+      <div class="star-rating">
+        <span class="stars"></span>
+      </div>
+      <p class="review-text"></p>
+    </div>
+  </template>
+
+  <!-- Add these modal dialogs at the end of the body, before the scripts -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login</h2>
+      <div id="loginError" class="error-message"></div>
+      <form id="loginForm">
+        <input type="email" name="email" placeholder="Email" required class="contact-input">
+        <input type="password" name="password" placeholder="Password" required class="contact-input">
+        <button type="submit" class="btn-submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="registerModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Register</h2>
+      <div id="registerError" class="error-message"></div>
+      <form id="registerForm">
+        <input type="email" name="email" placeholder="Email" required class="contact-input">
+        <input type="password" name="password" placeholder="Password" required class="contact-input">
+        <button type="submit" class="btn-submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add this before the closing </body> tag -->
+  <script src="./assets/js/contact.js"></script>
+
+</body>
+
+</html>
